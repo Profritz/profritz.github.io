@@ -1,0 +1,182 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.navigation {
+    position: fixed;
+    width: 100vw;
+    background-color: #567368;
+    color: #F2F2F2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.3em;
+    font-family: sans-serif;
+    height: 10vh;
+}
+
+.navigation ul {
+    list-style: none;
+    margin-right: 10em;
+}
+
+.navigation li {
+    display: inline-block;
+    margin-left: 2em;
+}
+
+.navigation a {
+    color: #F2F2F2;
+    text-decoration: none;
+    border: #567368;
+    border-style: solid;
+    padding-bottom: 5px;
+}
+
+.navigation a:hover {
+    color: #F2CB05;
+    border-bottom: #D93D04;
+    border-top: #567368;
+    border-left: #567368;
+    border-right: #567368;
+    border-style: solid;
+}
+
+.dropdown {
+    display: none;
+}
+
+.dropdown img {
+    height: 8vh;
+}
+
+#welcome {
+    min-height: 100vh;
+    max-height: max-content;
+    background-image: linear-gradient(135deg, #F2CB05 0%, #F27B13 60%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 3em;
+}
+
+#welcome h1 {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation: typing 1.5s steps(30, end), blink-caret .5s step-end infinite;
+}
+#welcome img{
+    width: 60vw;
+}
+/* The typing effect */
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+    50% {
+        border-color: orange
+    }
+}
+
+#about {
+    background-color: #567368;
+    /* margin-top: 10vh; */
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#about div {
+    color: #F2F2F2;
+    width: 40vw;
+    display: inline-block;
+    line-height: 1.8;
+}
+
+#abtmpic {
+    color: #F2CB05 !important;
+    display: flex !important;
+    align-items: center;
+    flex-direction: column;
+}
+
+#abtmpic img {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+}
+
+@media (max-width: 900px) {
+    .navigation ul {
+        display: none;
+    }
+    .dropbtn {
+        background-color: #567368;
+        color: white;
+        font-size: 16px;
+        border: none;
+    }
+    .dropbtn svg{
+        fill: #F2F2F2;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        margin-right: 5em;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: #F2CB05;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .dropdown:hover .dropbtn svg {
+        fill: #D93D04;
+    }
+    #welcome{
+        flex-direction: column;
+        justify-content: center;
+    }
+    #welcome img{
+        width: 90vw;
+    }
+    #about{
+        flex-direction: column;
+    }
+
+}
