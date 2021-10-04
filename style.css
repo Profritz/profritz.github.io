@@ -62,6 +62,7 @@ body {
 }
 
 #welcome h1 {
+    font-size: 3vw;
     color: #fff;
     font-family: monospace;
     overflow: hidden;
